@@ -267,7 +267,6 @@ public class BitbucketRepository {
                 }
                 rebuildCommentAvailable &= !hasMyBuildTag;
             }            
-            if (rebuildCommentAvailable) this.postBuildTagInTTPComment(id, "TTP build flag", buildKeyPart);
 
             final boolean canBuildTarget = rebuildCommentAvailable || !commitAlreadyBeenProcessed;
             logger.log(Level.FINE, "Build target? {0} [rebuild:{1} processed:{2}]", new Object[]{ canBuildTarget, rebuildCommentAvailable, commitAlreadyBeenProcessed});
